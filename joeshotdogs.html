@@ -1,0 +1,92 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+	 <meta name='viewport' content= "width=device-width, initial-scale=1"> 
+
+	 <link rel="stylesheet" type="text/css" href="restaurant.css"> 
+
+	 <title>Home</title>
+
+</head>
+<body>
+	<h1> Joe's Hotdog Stand</h1>
+
+	<br>
+	<br>
+
+	<a href="call-me-hangry-HP9vpVGq-WA-unsplash.jpg">
+    <img src="call-me-hangry-HP9vpVGq-WA-unsplash.jpg" class = "center" >
+  	</a>
+
+  	<br>
+  	<br>
+
+	<div class="prices";">
+  		<h2>Prices:</h2>
+  		<p>Hotdogs are $3.75 each </p>
+  		<p>Fries are $2.00 each </p>
+  		<p>Sodas are $1.80 each</p>
+  	</div>
+
+  	<br>
+  	<br>
+  	<br>
+
+  	<hr>
+  	<h2>Your Receipt: </h2>
+  	<hr>
+
+	<script language = "javascript">
+
+
+		// prompt user for order 
+		var hotdogs = window.prompt("How many hotdogs would you like?");
+		var fries = window.prompt("How many fries would you like?");
+		var sodas = window.prompt("How many sodas would you like?");
+
+
+		//order array 
+		//var order = ["hotdogs", "fries", "sodas"];
+
+		//priceHotdogs = 3.75; 
+		//priceFrenchfries = 2.00; 
+		//priceSodas = 1.80; 
+
+
+		var priceHotdogs = (hotdogs * 3.75); 
+		var priceFries = (fries * 2.00);
+		var priceSodas = (sodas * 1.80);
+
+		document.write("<br>");
+		document.write("You ordered " + hotdogs + " hotdogs, " + fries + " fries, and " + sodas + " sodas.");
+
+
+		var subtotal = (priceHotdogs + priceFries + priceSodas);
+		document.write("<br>")
+		document.write("<br>Your subtotal is $" + subtotal.toFixed(2));
+		
+
+		// if else statement for discount 
+		// addition of Mass meals taxt to final total
+		if ( subtotal >= 20.00) {
+			var afterDiscount = subtotal - (subtotal * .10);
+			document.write(" - after the 10% discount, your total is: $" + afterDiscount.toFixed(2) + ".");
+
+			var afterTax = afterDiscount + (afterDiscount * (0.0625)); 
+			document.write("<br>");
+			document.write(" <br> With the 6.25% Massachusets meals tax, your final total is $" + afterTax.toFixed(2) + ".");
+
+		} else {
+			document.write(" - you are not eligible for a discount.");
+
+			var afterTaxNoDiscount = subtotal + (subtotal * 0.0625);
+			document.write("<br>");
+			document.write(" <br> With the 6.25% Massachusets meal tax, your final total is $" + afterTaxNoDiscount.toFixed(2) + ".");
+		}
+		
+	</script>
+	<hr>
+	<div style="margin-top:500px"></div>
+</body>
+</html>
+

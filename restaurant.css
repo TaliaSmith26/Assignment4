@@ -1,0 +1,48 @@
+
+
+h1 {
+	color: black; 
+	text-align: center;
+	font-size: 50px;
+	font-family: Comic Sans MS;
+	background-color: rgb(218,165,32);
+	padding: 20px;
+}
+
+
+
+body {
+	background-color: gainsboro;
+	color: black;
+	font-size: 17px;
+	font-family:Arial;
+	text-align: left;
+	font-weight:bold ;
+	border color: 5px black;
+}
+
+.prices {
+	text-align: center;
+	background-color: darkslategray;
+	color: rgb(218,165,32);
+	padding: 7px;
+	margin: 50px;
+	font-weight:bold ;
+}
+
+.center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+}
+
+
+@media screen and (max-width: 650px) {
+	.center {
+	display: block;
+    }
+}
+
+
+/* rgb(240, 230, 140) */
